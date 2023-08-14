@@ -9,4 +9,6 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class BaseFilter {
+    private int pageNo;
+    private int pagetSize;
 }
