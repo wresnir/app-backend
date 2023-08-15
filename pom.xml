@@ -22,25 +22,41 @@
         <spring.version>3.1.2</spring.version>
         <javax.validation.version>2.0.1.Final</javax.validation.version>
         <lombok.version>1.18.28</lombok.version>
+        <jackson.jsr310.version>2.15.2</jackson.jsr310.version>
         <maven.compiler.version>3.11.0</maven.compiler.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <!-- Modules -->
             <dependency>
                 <groupId>wresni.project.app</groupId>
                 <artifactId>entity</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
             <dependency>
+                <groupId>wresni.project.app</groupId>
+                <artifactId>core</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+
+            <!-- Spring Related -->
+            <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
                 <version>${spring.version}</version>
             </dependency>
+
+            <!-- Extra Tools -->
             <dependency>
                 <groupId>javax.validation</groupId>
                 <artifactId>validation-api</artifactId>
                 <version>${javax.validation.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                <artifactId>jackson-datatype-jsr310</artifactId>
+                <version>${jackson.jsr310.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
